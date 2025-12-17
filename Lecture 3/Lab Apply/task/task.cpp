@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
-#include "BST.h"
+#include "AVL.h"
 using namespace std;
 
 int main()
 {
-	BST<int> s;
+	AVL<int> s;
 	// { Credits: TO GPT FOR TEST CASES
 	vector<vector<int>> in = 
 	{ 
@@ -41,47 +41,56 @@ int main()
 	};
 	// Credits: TO GPT FOR TEST CASES }
 
-	BST<int> bst;
+	//AVL<int> bst;
 
-	vector<int> ops;
-	ops.reserve(12000);
+	//vector<int> ops;
+	//ops.reserve(12000);
 
-	int base = 1000000;
-	int step = 100;
+	//int base = 1000000;
+	//int step = 100;
 
-	for (int i = 0; i < 100000; i++) {
-		int A = base + i * step;
+	//for (int i = 0; i < 1000; i++) {
+	//	int A = base + i * step;
 
-		// LR case
-		ops.push_back(A);
-		ops.push_back(A - 20);
-		ops.push_back(A - 10);
+	//	// LR case
+	//	ops.push_back(A);
+	//	ops.push_back(A - 20);
+	//	ops.push_back(A - 10);
 
-		// RL case
-		ops.push_back(A + 10);
-		ops.push_back(A + 5);
-		ops.push_back(A + 7);
-	}
+	//	// RL case
+	//	ops.push_back(A + 10);
+	//	ops.push_back(A + 5);
+	//	ops.push_back(A + 7);
+	//}
 
-	for (int x : ops)
-		bst.insert(x);
+	//for (int x : ops)
+	//	bst.insert(x);
 
-	// repeatedly erase nodes with two children
-	vector<int> del = { 50, 30, 70, 20, 40, 60, 80 };
+	//// repeatedly erase nodes with two children
+	//vector<int> del = { 50, 30, 70, 20, 40, 60, 80 };
 
 	//cout << bst << "\n";
 	//for (int x : del)
 	//	bst.erase(x);
 
-	cout << bst << "\n";
+	//cout << bst << "\n";
+	
+	//vector<int> ins = { 1,2,3 };
+	//for (auto& x : ins) s.insert(x);
 
-	//while (true)
 	//{
-	//	int x;
-	//	cout << "insert :"; cin >> x;
-	//	s.insert(x);
-	//	cout << s << "\n";
+	//	AVL<int> ss(s);
+
+	//	cout << ss << '\n';
 	//}
+	//cout << s << '\n';
+	while (true)
+	{
+		int x;
+		cout << "insert :"; cin >> x;
+		s.insert(x);
+		cout << s << "\n";
+	}
 
 
 
@@ -90,20 +99,17 @@ int main()
 	//{
 	//	cout << "insert: ";
 	//	for (auto& in : in[i])
-	//		s.insert(in)/*, cout << in << " " */;
+	//		s.insert(in), cout << in << " ";
 	//	cout << '\n' << s << '\n';
 	//	cout << "erase: ";
 	//	for (auto& out : out[i])
 	//		s.erase(out), cout << out << " ";
-	//	//cout << s.size() << " " << s.levels() << "\n";
+	//	//cout << s.size() << " " << s.height() << "\n";
 	//	//cout << s.balance(s.root);
 	//	cout << '\n' << s << '\n';
 	//	s.clear();
 	//	cout << "\n";
 	//}
-
-
-
 
 	return 0;
 }
